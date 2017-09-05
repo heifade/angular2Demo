@@ -1,0 +1,16 @@
+<div class="control-group" [formGroup]="form">
+  <label class="control-label">{{label}}：</label>
+  <div class="control-contain">
+    <input
+
+      [type]="type || 'text'"
+      class="form-control"
+      [formControlName]="controlName"
+      [(ngModel)] = "ngModel"
+      [readonly]="readonly"
+
+    />      
+    <div class="unit" *ngIf="unit">{{unit}}</div>
+  </div>
+  <form-control-error [form]="form" [controlName]="controlName"></form-control-error>
+</div>

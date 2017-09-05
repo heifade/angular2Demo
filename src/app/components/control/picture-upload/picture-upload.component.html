@@ -1,0 +1,22 @@
+<div class="control-group pictureUpload" [formGroup]="form">
+
+  <label class="control-label">{{label}}：</label>
+  <div class="control-contain">
+    <form class="form formOfFile">
+      <input type="file" class="file" name="file" [(ngModel)]="fileValue" (change)="fileChange($event)" [ngModelOptions]="{standalone: true}" />
+    </form>
+
+    <div class="span12" style="text-align:center;margin-left:0px;">
+      <div class="divProductFM">
+        <div class="divProductF">
+          <div class="imgProduct" [ngStyle]="{'background-image': 'url(' + noPicture + ')'}" *ngIf="!pictureName"></div>
+          <div class="imgProduct" [ngStyle]="{'background-image': 'url(' + pictureFullName + ')'}" *ngIf="pictureName"></div>
+          <input class="btn btn-primary btnUpload" type="button" value="点击上传图片" (click)="onUpload($event)" *ngIf="!pictureName" />
+        </div>
+        <span class="glyphicon glyphicon-remove-circle btnRemove" *ngIf="pictureName" (click)="deletePicture($event)" title="点击删除"></span>
+      </div>
+    </div>
+    <input type="text" [(ngModel)]="pictureName" [formControlName]="controlName" style="width:0;height:0;top:-10000px;position:absolute;" />
+  </div>
+  <form-control-error [form]="form" [controlName]="controlName" [controlCanTouch]="false"></form-control-error>
+</div>

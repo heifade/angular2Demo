@@ -1,0 +1,17 @@
+<div class="control-error">
+  <div *ngIf="isShowError()">
+    <span class="glyphicon glyphicon-remove-sign" *ngIf="ctrl.errors" (mouseover)="showErrorDetail(true)" (mouseout)="showErrorDetail(false)"></span>
+    <div class="error-list-frame" *ngIf="ctrl.errors" [style.display]="isErrorDetailShow ? 'block':'none'">
+      <ul class="error-list">
+        <li *ngIf="ctrl.errors['required']">不允许为空</li>
+        <li *ngIf="ctrl.errors['maxlength']">输入字符个数不能多于{{ctrl.errors['maxlength'].requiredLength}}</li>
+        <li *ngIf="ctrl.errors['minlength']">输入字符个数不能少于{{ctrl.errors['minlength'].requiredLength}}</li>
+
+        <li *ngIf="ctrl.errors['validateInt']">请输入整数</li>
+        <li *ngIf="ctrl.errors['validateFloat']">请输入浮点数</li>
+        <li *ngIf="ctrl.errors['validateMax']">输入值不能大于{{ctrl.errors['validateMax'].maxValue}}</li>
+        <li *ngIf="ctrl.errors['validateMin']">输入值不能小于{{ctrl.errors['validateMin'].minValue}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

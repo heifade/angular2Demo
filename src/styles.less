@@ -1,0 +1,40 @@
+
+/* You can add global styles to this file, and also import other style files */
+
+@import url('./base.less');
+
+
+/* .ng-invalid-err {
+  border-color: red !important;
+} */
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.control-group {
+  display: table;
+  .control-label{
+    display: table-cell;
+    width: 110px;
+    margin-bottom: 0;
+    line-height: 34px;
+    position: relative;
+    padding-right: 5px;
+    font-weight: normal;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .control-contain {
+    display: table-cell;
+    position: relative;
+  }
+
+  .ng-invalid:not(.ng-pristine):not(form) {
+    border: solid 1px @color-danger;
+  }
+  .ng-valid {
+    border: solid 1px @color-success;
+  }
+}

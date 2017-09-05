@@ -1,0 +1,44 @@
+@import url('../../../base.less');
+
+form-control-error {
+  display: table-cell;
+  width: 20px;
+  height: 34px;
+}
+
+.control-error {
+  
+  color: @color-danger;
+  position: relative;
+
+  span {
+    font-size: 18px;
+    position: absolute;
+    top: 8px;
+    cursor: pointer;
+  }
+
+  .error-list-frame {
+    position: absolute;
+    display: none;
+    top: 28px;
+    border: solid 1px #e1e1e1;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px #ccc;
+    background-color: #ffffff;
+    z-index: 2;
+
+    .error-list {
+      margin: 0px;
+      list-style: none;
+      padding: 2px 5px;
+
+      li {
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+    }
+  }
+}
