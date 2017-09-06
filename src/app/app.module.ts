@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { TextBoxComponent } from './components/control/text-box/text-box.component';
-import { formControlErrorComponent } from './components/form-control-error/form-control-error.component';
+import { LoginComponent } from './pages/login/login.component';
+import { TextBoxComponent } from './control/text-box/text-box.component';
+import { formControlErrorComponent } from './control/form-control-error/form-control-error.component';
 import { ValidateMaxDirective } from './directives/validate-max/validate-max.directive';
-import { PictureUploadComponent } from './components/control/picture-upload/picture-upload.component';
+import { PictureUploadComponent } from './control/picture-upload/picture-upload.component';
+import { appRoutes } from './app.routes';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { PictureUploadComponent } from './components/control/picture-upload/pict
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

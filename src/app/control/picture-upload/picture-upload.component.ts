@@ -1,10 +1,7 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/toPromise';
 import { FormGroup } from "@angular/forms";
-import { Http, Headers, Request, RequestOptions, Response, RequestMethod, URLSearchParams } from '@angular/http';
-import { post, upload } from "../../../common/httpHelper";
+import { Http, Response } from '@angular/http';
+import { upload } from "../../common/httpHelper";
 
 
 @Component({
@@ -32,21 +29,6 @@ export class PictureUploadComponent implements OnInit {
   constructor(public http: Http, public element: ElementRef) {
     // this.fileValue = "";
   }
-
-  // ccc() {
-  //   let url = '/api/User/AdminLogin';
-
-  //   post(this.http, url, {
-  //     PhoneNo: 'djd',
-  //     Password: 'djd',
-  //   })
-  //     .then((res: Response) => {
-  //       console.log(res);
-  //     })
-  //     .catch((e) => {
-  //       console.log(111, e);
-  //     }); 
-  // }
 
   onUpload($event) {
     this.fileInput[0].click();
