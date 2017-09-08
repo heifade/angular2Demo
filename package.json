@@ -1,12 +1,12 @@
 {
   "name": "heifade-angular-demo",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "license": "MIT",
   "angular-cli": {},
   "main": "index.js",
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
+    "build": "ng build --aot",
     "start": "ng serve --open --proxy-config proxy.config.json",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",

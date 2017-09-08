@@ -7,7 +7,6 @@ import { Validator, Validators, FormGroup, AbstractControl } from '@angular/form
   styleUrls: ['./text-box.component.less'],
 })
 export class TextBoxComponent implements OnInit {
-  
   @Input() public label: string; //标题文字
   @Input() public checktype: string; //string(字符串),positive-int(正整数),int(整数),positive-float(正浮点数),float(浮点数)
   @Input() public readonly: boolean; //是否只读

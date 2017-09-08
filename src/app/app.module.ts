@@ -11,6 +11,7 @@ import { ValidateMaxDirective } from './directives/validate-max/validate-max.dir
 import { PictureUploadComponent } from './control/picture-upload/picture-upload.component';
 import { appRoutes } from './app.routes';
 import { RouterModule } from '@angular/router';
+import { TestComponent } from './control/test/test.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { RouterModule } from '@angular/router';
     formControlErrorComponent,
     ValidateMaxDirective,
     PictureUploadComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,

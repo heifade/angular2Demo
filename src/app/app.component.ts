@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent extends OnInit {
   ngOnInit(): void {
-    
+    console.log('AppComponent ngOnInit');
   }
-  title = 'app works!';
 
   public onLogin($event) {
     console.log($event);

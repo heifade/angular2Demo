@@ -3,20 +3,29 @@ import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractC
 import { post } from "../../common/httpHelper";
 import { Http, Response } from "@angular/http";
 import { Router } from "@angular/router";
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.less']
+  styleUrls: ['./login.component.less'],
+  providers: [LoginService],
 })
 
 export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
 
+  public vvv: string = "";
+
   @Output()
   public onLogin = new EventEmitter<Object>();
 
-  constructor(public http: Http, public element: ElementRef, public router: Router) {
+  constructor(
+    public http: Http,
+    public element: ElementRef,
+    public router: Router,
+    public loginService: LoginService
+  ) {
 
   }
 
@@ -66,20 +75,12 @@ export class LoginComponent implements OnInit {
   }
 
   login($event) {
-    let formData = this.loginForm.value;
-    let url = '/api/User/AdminLogin';
-
-    post(this.http, url, {
-      PhoneNo: formData.userName,
-      Password: formData.password,
-    })
-      .then((res: Response) => {
-        
+    this.loginService.login({
+      data: this.loginForm.value,
+      onSuccess: () => {
         this.router.navigateByUrl('main');
-      })
-      .catch((e) => {
-        console.log(111, e);
-      }); 
+      }
+    })
   }
 
 }
