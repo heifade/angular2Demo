@@ -12,6 +12,9 @@ import { PictureUploadComponent } from './control/picture-upload/picture-upload.
 import { appRoutes } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { TestComponent } from './control/test/test.component';
+import { WaitComponent } from './control/wait/wait.component';
+import { MessageBoxComponent } from './control/message-box/message-box.component';
+import { DateBoxComponent } from './control/date-box/date-box.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { TestComponent } from './control/test/test.component';
     ValidateMaxDirective,
     PictureUploadComponent,
     TestComponent,
+    WaitComponent,
+    MessageBoxComponent,
+    DateBoxComponent,
   ],
   imports: [
     BrowserModule,

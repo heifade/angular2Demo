@@ -1,0 +1,24 @@
+<div class="message-box" *ngIf="isShow">
+  <div class="message-box-back"></div>
+  <div class="message-box-container">
+
+
+    <div class="message-box-header">
+      <i type="button" class="glyphicon glyphicon-remove btnClose" (click)="hide()"></i>
+      <div class="title">{{title}}</div>
+    </div>
+    <div class="message-box-body">
+      <i class="icon" [ngClass]="iconClass"></i>
+      <div name="messageText" class="message">{{message}}</div>
+      <div style="clear:both"></div>
+    </div>
+    <div class="message-box-footer">
+      <div class="buttons">
+        <div *ngFor="let button of buttons" class="button" [style.width]="(100 / buttons.length) + '%'" (click)="clickButton(button)">{{button.title}}</div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+
+
+  </div>
+</div>

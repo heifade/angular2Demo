@@ -1,0 +1,111 @@
+.message-box{
+  
+  & .message-box-back{
+    opacity:0.2;
+    z-index:2000;
+    background-color:#000;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+  }
+
+
+  & .message-box-container{
+    z-index:2001;
+    width:500px;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:#ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    position: fixed;
+
+    & .message-box-header{
+      border-bottom:solid 1px #d0d0d0;
+      height: 40px;
+
+      & .title{
+        text-align: center;
+        line-height: 40px;
+        font-size: 18px;
+      }
+
+      & .btnClose{
+        font-size:20px;
+        cursor:pointer;
+        float:right;
+        margin: 5px 5px 0 0;
+        color:#666;
+
+        &:hover{
+          color:#ff1616;
+        }
+      }
+    }
+
+    & .message-box-body{
+      margin:0 0 0 0;
+      min-height:100px;
+      border-bottom:solid 1px #d0d0d0;
+
+      & .icon {
+        font-size:40px;
+        float:left;
+        margin: 10px;
+
+        &.glyphicon-info-sign {
+          color: #24f052;
+        }
+        &.glyphicon-warning-sign {
+          color: #facd1b;
+        }
+        &.glyphicon-remove-sign {
+          color: #ff1616;
+        }
+        &.glyphicon-question-sign {
+          color: #f49f20;
+        }
+      }
+
+      & .message{
+        margin-left:10px;
+        line-height:40px;
+        float:left;
+        font-size:16px;
+      }
+    }
+
+    & .message-box-footer{
+
+      & .buttons{
+        height: 40px;
+
+        & .button{
+          text-align: center;
+          line-height: 40px;
+          display: inline-block;
+          cursor: pointer;
+          border-right: solid 1px #d0d0d0;
+
+          &:active {
+            background-color: #e1e1e1;
+          }
+          &:hover{
+            color: #666;
+          }
+
+          &:last-child{
+            border-right: none;
+          }
+          
+        }
+      }
+
+    }
+  }
+}
+
+  

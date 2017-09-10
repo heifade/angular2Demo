@@ -5,7 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent extends OnInit {
+export class AppComponent implements OnInit {
+
+  constructor() {
+
+    
+    
+  }
+
   ngOnInit(): void {
     console.log('AppComponent ngOnInit');
   }

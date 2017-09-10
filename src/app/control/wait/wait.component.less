@@ -1,0 +1,28 @@
+@import url('../../base.less');
+
+.wait {
+  & .wait-back {
+    .mask-layer;
+    z-index: 2001;
+  }
+
+  & .wait-box-img {
+    width: 64px;
+    height: 64px;
+    background-color:#000000;
+    background-image: url(../assets/img/wait.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40px 40px;
+    
+    opacity: 0.7;
+    border-radius: 8px;
+    padding:10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2002;
+  }
+}
